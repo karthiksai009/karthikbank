@@ -1,0 +1,109 @@
+#include <stdio.h>
+ int age, previousloans, taxedsalary, untaxedsalary, taxpaid,
+    taxedinhandmonthly, loanamt;
+    
+    void tax(void);
+    void loan(void);
+void main ()
+{
+   tax();
+   loan();
+    
+}
+    void tax(){
+        printf ("\t\t\t\t\t\t\tWELCOME TO MY BANK \n\n\n");
+  int age, previousloans, taxedsalary, untaxedsalary, taxpaid,
+    taxedinhandmonthly, loanamt;
+  printf ("\t\t\t\t\t\t\tTaxation Department\n\n");
+  printf ("\nEnter your salary before taxation : ");
+  scanf ("%d", &untaxedsalary);
+  if (untaxedsalary <= 250000)
+    {
+      printf ("\nNo tax is applicable on this income group.");
+    }
+  else if (untaxedsalary > 250000 && untaxedsalary <= 500000)
+    {
+      taxpaid = untaxedsalary * 0.05;
+      taxedsalary = untaxedsalary - taxpaid;
+      taxedinhandmonthly = taxedsalary / 12;
+      printf ("\nThe tax percentage applicable is 5 percent.\n");
+      printf ("\nThe amount of money paid on taxes is : %d\n", taxpaid);
+      printf ("\nThe amount of money after paying taxes is : %d\n",
+	      taxedsalary);
+      printf
+	("\nThe amount of money that you earn in hand every month is : %d\n",
+	 taxedinhandmonthly);
+    }
+  else if (untaxedsalary > 500000 && untaxedsalary <= 700000)
+    {
+      taxpaid = untaxedsalary * 0.1;
+      taxedsalary = untaxedsalary - taxpaid;
+      taxedinhandmonthly = taxedsalary / 12;
+      printf ("\nThe tax percentage applicable is 10 percent.\n");
+      printf ("\nThe amount of money paid on taxes is : %d\n", taxpaid);
+      printf ("\nThe amount of money after paying taxes is : %d\n",
+	      taxedsalary);
+      printf
+	("\nThe amount of money that you earn in hand every month is : %d\n",
+	 taxedinhandmonthly);
+    }
+  else if (untaxedsalary > 700000 && untaxedsalary < 1000000)
+    {
+      taxpaid = untaxedsalary * 0.15;
+      taxedsalary = untaxedsalary - taxpaid;
+      taxedinhandmonthly = taxedsalary / 12;
+      printf ("\nThe tax percentage applicable is 15 percent.\n");
+      printf ("\nThe amount of money paid on taxes is : %d\n", taxpaid);
+      printf ("\nThe amount of money after paying taxes is : %d\n",
+	      taxedsalary);
+      printf
+	("\nThe amount of money that you earn in hand every month is : %d\n",
+	 taxedinhandmonthly);
+    }
+  else if (untaxedsalary >= 1000000)
+    {
+      taxpaid = untaxedsalary * 0.30;
+      taxedsalary = untaxedsalary - taxpaid;
+      taxedinhandmonthly = taxedsalary / 12;
+      printf ("\nThe tax percentage applicable is 30 percent.\n");
+      printf ("\nThe amount of money paid on taxes is : %d\n", taxpaid);
+      printf ("\nThe amount of money after paying taxes is : %d\n",
+	      taxedsalary);
+      printf
+	("\nThe amount of money that you earn in hand every month is : %d\n",
+	 taxedinhandmonthly);
+    }
+    }
+    
+    void loan()
+{
+    
+    printf("\n\t\t\t\t\t\t\tLOAN DEPARTMENT\n");
+  printf ("\nEnter your age : ");
+  scanf ("%d", &age);
+  printf ("\nEnter your salary per month after taxation : ");
+  scanf ("%d", &taxedsalary);
+  printf
+    ("\nEnter the total amount of previous loans you have to pay per month : ");
+  scanf ("%d", &previousloans);
+  if (age <= 18 || age > 65)
+    {
+      printf ("\nLoan is not applicable.\n");
+    }
+  else
+    {
+      if (previousloans = 0)
+	{
+	  loanamt = (taxedsalary / 2) * 70;
+	  printf ("\nThe maximum amount of money that can be given is : %d",
+		  loanamt);
+	}
+      else
+	{
+	  loanamt = ((taxedsalary / 2) - previousloans) * 70;
+	  printf ("\nThe maximum amount of loan money that can be given is : %d",
+		  loanamt);
+	}
+    }
+}
+ 
